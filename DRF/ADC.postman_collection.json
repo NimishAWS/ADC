@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "175b0d92-123a-4f8e-8040-3e38cfdb65cd",
+		"name": "ADC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17544221",
+		"_collection_link": "https://blue-satellite-266525.postman.co/workspace/Nimish-workspace~6932d3e8-500d-429b-8eaa-a02397084c53/collection/17544221-175b0d92-123a-4f8e-8040-3e38cfdb65cd?action=share&creator=17544221&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"devloper@gmail.com\",\n  \"first_name\": \"Nimish\",\n  \"last_name\": \"Nagapure\",\n  \"password\": \"Password@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"devloper@gmail.com\",\n    \"password\": \"Password@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg2NDk1NTEwLCJpYXQiOjE2ODY0MDkxMTAsImp0aSI6IjUwMzFiMmY0ZjMyMDRjOTNiYjhhMDhlNTEzZDQ0ZTE1IiwidXNlcl9pZCI6M30.LtnrxMAixLr8mFi2VG8DpHf8Tv40zOWm5M4jCkqTOuA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ3MzMzNDIzLCJpYXQiOjE2NDcyNDcwMjMsImp0aSI6IjMyZTc0ODE3MTcyMTQ0NmFhZDM1ZTkzZjYyYzdiZDFkIiwidXNlcl9pZCI6Mn0.Q-3OimifgEF8CUiUBxyhVXKBUyT9XyE4fUVmHNet1dw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"refresh\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY4NjU4MTkxMCwiaWF0IjoxNjg2NDA5MTEwLCJqdGkiOiJkMDEwNWVjNGNlY2U0MTU1YmZhMzE2MzRhNWZiZmRlMSIsInVzZXJfaWQiOjN9.OCJBGqRfIdFjPTtOLrcSbggMGrqtCgURtcArDt1yYwY\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/logout/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token-refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY4NjU3ODkyOSwiaWF0IjoxNjg2NDA2MTI5LCJqdGkiOiI3YjkzNWY4YTFlYTQ0NjllOGJmNTk4N2Q3ZjMwMDcyNyIsInVzZXJfaWQiOjJ9.FQK53JQT6qFaOp9EW9hKrHj6Z6RRCq73nTkvVAUI8m0\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/token/refresh/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						"refresh",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Blog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg2NDk1NTEwLCJpYXQiOjE2ODY0MDkxMTAsImp0aSI6IjUwMzFiMmY0ZjMyMDRjOTNiYjhhMDhlNTEzZDQ0ZTE1IiwidXNlcl9pZCI6M30.LtnrxMAixLr8mFi2VG8DpHf8Tv40zOWm5M4jCkqTOuA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Second Blog",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "This my second blog",
+							"type": "text"
+						},
+						{
+							"key": "display_picture",
+							"type": "file",
+							"src": "/Users/NimishMac/Downloads/1676731365568.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/blogs/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blogs",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Blog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg2NDk1NTEwLCJpYXQiOjE2ODY0MDkxMTAsImp0aSI6IjUwMzFiMmY0ZjMyMDRjOTNiYjhhMDhlNTEzZDQ0ZTE1IiwidXNlcl9pZCI6M30.LtnrxMAixLr8mFi2VG8DpHf8Tv40zOWm5M4jCkqTOuA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Blog",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "This my first blog",
+							"type": "text"
+						},
+						{
+							"key": "display_picture",
+							"type": "file",
+							"src": "/Users/NimishMac/Downloads/20465900.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/blogs/2/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blogs",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list Blog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg2NDk1NTEwLCJpYXQiOjE2ODY0MDkxMTAsImp0aSI6IjUwMzFiMmY0ZjMyMDRjOTNiYjhhMDhlNTEzZDQ0ZTE1IiwidXNlcl9pZCI6M30.LtnrxMAixLr8mFi2VG8DpHf8Tv40zOWm5M4jCkqTOuA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/blogs/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blogs",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detail Blog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg2NDkzNDM3LCJpYXQiOjE2ODY0MDcwMzcsImp0aSI6IjRkMjdmN2MwMjhlYjQyZWVhZDBlOTk5MGMxZmE4ODFlIiwidXNlcl9pZCI6Mn0.zndskUDC1FlPZU3mk4FRBEtnWofnPafYbt8wjldk5bI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/blogs/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blogs",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Blog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg2NDkzNDM3LCJpYXQiOjE2ODY0MDcwMzcsImp0aSI6IjRkMjdmN2MwMjhlYjQyZWVhZDBlOTk5MGMxZmE4ODFlIiwidXNlcl9pZCI6Mn0.zndskUDC1FlPZU3mk4FRBEtnWofnPafYbt8wjldk5bI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/blogs/3/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blogs",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

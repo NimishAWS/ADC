@@ -127,7 +127,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-
+DRF/blog_env
+Django/blog_e
 # Spyder project settings
 .spyderproject
 .spyproject
@@ -145,7 +146,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-
 # pytype static type analyzer
 .pytype/
 
